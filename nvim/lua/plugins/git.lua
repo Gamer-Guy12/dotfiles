@@ -70,5 +70,16 @@ return {
          require("neogit").setup({})
          vim.keymap.set("n", "<leader>g", ":Neogit<CR>", { silent = true })
       end
+   },
+   {
+      "pwntester/octo.nvim",
+      dependencies = {
+         'nvim-lua/plenary.nvim',
+         'nvim-telescope/telescope.nvim',
+         'nvim-tree/nvim-web-devicons'
+      },
+      config = function()
+         require("octo").setup({})
+      end
    }
 }

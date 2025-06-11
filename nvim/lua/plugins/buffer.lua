@@ -7,7 +7,7 @@ return {
             vim.opt.termguicolors = true
             require("bufferline").setup({})
 
-            vim.keymap.set("n", "<leader>w", ":bp | bd #<CR>:<Esc>")
+            vim.keymap.set("n", "<leader>w", ":bp | bd #<CR>:<Esc>", { silent = true })
         end
     }
 }

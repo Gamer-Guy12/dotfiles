@@ -6,10 +6,10 @@ return {
         config = function ()
             require("telescope").setup({})
 
-            vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>:<BS><Esc>")
-            vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>:<BS><Esc>")
-            vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>:<BS><Esc>")
-            vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>:<BS><Esc>")
+            vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>:<BS><Esc>", { silent = true })
+            vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>:<BS><Esc>", { silent = true })
+            vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>:<BS><Esc>", { silent = true })
+            vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>:<BS><Esc>", { silent = true })
         end
-    }
-}
+    },
+ }

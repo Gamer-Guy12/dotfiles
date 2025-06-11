@@ -49,5 +49,25 @@ return {
             }
          })
       end
-   } 
+   },
+   {
+      "mrloop/telescope-git-branch.nvim",
+      dependencies = {
+         "nvim-telescope/telescope.nvim"
+      },
+      config = function()
+         require('telescope').load_extension('git_branch')
+      end
+   },
+   {
+      "NeogitOrg/neogit",
+      dependencies = {
+         "nvim-lua/plenary.nvim",
+         "sindrets/diffview.nvim",
+         "nvim-telescope/telescope.nvim"
+      },
+      config = function()
+         require("neogit").setup({})
+      end
+   }
 }

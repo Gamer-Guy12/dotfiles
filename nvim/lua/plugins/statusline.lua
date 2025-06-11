@@ -56,5 +56,11 @@ return {
                 }
             })
         end
+    },
+    {
+       "nvim-lua/lsp-status.nvim",
+       config = function()
+          require("lsp-status").config({})
+       end
     }
 }

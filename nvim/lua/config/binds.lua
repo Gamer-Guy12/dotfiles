@@ -12,3 +12,4 @@ vim.keymap.set('n', "<C-S-Tab>", ":bp", { silent = true })
 
 -- Nvim Commands
 vim.keymap.set('n', "<leader>b", "<C-v>", { silent = true })
+vim.keymap.set('n', "<leader>q", ":q<CR>", { silent = true })

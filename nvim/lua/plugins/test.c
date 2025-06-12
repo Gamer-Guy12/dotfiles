@@ -1,10 +1,5 @@
 #include <stdio.h>
 
-void hi(int size) {
-   printf("Hello World\n");
-}
+void hi(int size) { printf("Hello World\n"); }
 
-int main() {
-   hi(0);
-}
-
+int main() { hi(0); }

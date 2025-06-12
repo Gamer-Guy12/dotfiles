@@ -16,5 +16,13 @@ return {
       config = function()
          require("lsp_signature").setup({})
       end
+   },
+   {
+      "mason-org/mason.nvim",
+      config = function()
+         require("mason").setup({})
+
+         vim.keymap.set('n', "<leader>cf", ":!clang-format -i %<CR>", { noremap = true, silent = true })
+      end
    }
 }

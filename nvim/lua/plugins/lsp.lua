@@ -15,5 +15,11 @@ return {
       config = function()
          require("nvim-treesitter").setup({})
       end
+   },
+   {
+      "nvimdev/lspsaga.nvim",
+      config = function()
+         require("lspsaga").setup({})
+      end
    }
 }

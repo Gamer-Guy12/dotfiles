@@ -12,6 +12,7 @@ vim.keymap.set('n', "<leader><S-tab>", ":bprev<CR>", { silent = true })
 
 -- nvim
 vim.keymap.set('n', "<leader>q", ":q<CR>", { silent = true })
+vim.keymap.set('n', "<C-q>", ":q<CR>", { silent = true })
 vim.keymap.set('n', "<C-s>", ":w<CR>", { silent = true })
 
 -- LSP

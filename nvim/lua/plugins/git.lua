@@ -94,10 +94,9 @@ return {
          "LazyGitFilterCurrentFile"
       },
       config = function()
-         require("lazygit").setup({})
       end,
       keys = {
-         { "<leader>g", "<cmd>LazyGit<CR>", { silent = true } }
+         { "<leader>g", "<cmd>LazyGit<cr>", { silent = true } }
       }
    }
 }

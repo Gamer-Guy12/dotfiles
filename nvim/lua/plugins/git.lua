@@ -68,7 +68,6 @@ return {
       },
       config = function()
          require("neogit").setup({})
-         vim.keymap.set("n", "<leader>g", ":Neogit<CR>", { silent = true })
       end
    },
    {
@@ -81,5 +80,24 @@ return {
       config = function()
          require("octo").setup({})
       end
+   },
+   {
+      "kdheepak/lazygit.nvim",
+      dependencies = {
+         "nvim-lua/plenary.nvim"
+      },
+      cmd = {
+         "LazyGit",
+         "LazyGitConfig",
+         "LazyGitCurrentFile",
+         "LazyGitFilter",
+         "LazyGitFilterCurrentFile"
+      },
+      config = function()
+         require("lazygit").setup({})
+      end,
+      keys = {
+         { "<leader>g", "<cmd>LazyGit<CR>", { silent = true } }
+      }
    }
 }

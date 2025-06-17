@@ -15,6 +15,7 @@ vim.keymap.set('n', "<leader>q", ":q<CR>", { silent = true })
 vim.keymap.set('n', "<C-q>", ":q<CR>", { silent = true })
 vim.keymap.set('n', "<C-s>", ":w<CR>", { silent = true })
 vim.keymap.set('n', "<leader>vb", "<C-v>", { silent = true })
+vim.keymap.set('n', "<leader>i", ":lua vim.lsp.buf.hover()<CR>", { silent = true })
 
 -- LSP
 vim.keymap.set('n', "<leader>a", ":lua vim.lsp.buf.code_action()<CR>", { silent = true })

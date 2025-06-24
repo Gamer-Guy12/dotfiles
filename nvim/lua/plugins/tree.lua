@@ -10,11 +10,4 @@ return {
             vim.keymap.set('n', '<C-n>', ":NvimTreeToggle<CR>:<Esc>", { silent = true })
         end
 	},
-   {
-       "echasnovski/mini.icons",
-       opts = {},
-       specs = {
-          { "nvim-tree/nvim-web-devicons", enabled = false, optional = true }
-       },
-   }
 }

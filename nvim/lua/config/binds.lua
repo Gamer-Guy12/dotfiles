@@ -17,5 +17,10 @@ vim.keymap.set('n', "<C-s>", ":w<CR>", { silent = true })
 vim.keymap.set('n', "<leader>vb", "<C-v>", { silent = true })
 vim.keymap.set('n', "<leader>i", ":lua vim.lsp.buf.hover()<CR>", { silent = true })
 
+vim.keymap.set('i', "<C-h>", "<Left>", { silent = true, noremap = true })
+vim.keymap.set('i', "<C-j>", "<Down>", { silent = true, noremap = true })
+vim.keymap.set('i', "<C-k>", "<Up>", { silent = true, noremap = true });
+vim.keymap.set('i', "<C-l>", "<Right>", { silent = true, noremap = true })
+
 -- LSP
 vim.keymap.set('n', "<leader>a", ":lua vim.lsp.buf.code_action()<CR>", { silent = true })

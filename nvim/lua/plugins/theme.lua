@@ -1,21 +1,32 @@
 return {
-	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		priority = 1000,
-		config = function()
-			require("catppuccin").setup({
-				flavour = "macchiato"
-			})
-			vim.cmd.colorscheme "catppuccin"
-		end
-	},
+	-- {
+	-- 	"catppuccin/nvim",
+	-- 	name = "catppuccin",
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		require("catppuccin").setup({
+	-- 			flavour = "macchiato"
+	-- 		})
+	-- 		vim.cmd.colorscheme "catppuccin"
+	-- 	end
+	-- },
+  -- {
+  --   "nvim-tree/nvim-web-devicons",
+  --   config = function()
+  --     require("nvim-web-devicons").setup({
+  --       default = true
+  --     })
+  --   end
+  -- },
   {
-    "nvim-tree/nvim-web-devicons",
+    "navarasu/onedark.nvim",
+    priority = 1000,
     config = function()
-      require("nvim-web-devicons").setup({
-        default = true
+      require('onedark').setup({
+        style='dark'
       })
+
+      require('onedark').load()
     end
   }
 }

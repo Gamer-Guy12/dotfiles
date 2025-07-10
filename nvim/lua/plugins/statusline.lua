@@ -52,7 +52,10 @@ return {
         config = function()
                 
             require("lualine").setup({options = {
-                    theme = theme("macchiato")
+                    theme = 'onedark',
+                    icons_enabled = true,
+                    component_seperators = '|',
+                    section_seperators = ''
                 }
             })
         end

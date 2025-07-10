@@ -69,4 +69,25 @@ return {
          })
       end
    },
+   {
+     "ThePrimeagen/refactoring.nvim",
+     dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter"
+     },
+     lazy = false,
+     config = function()
+       require("refactoring").setup({
+
+       })
+
+       vim.keymap.set("x", "<leader>re", ":Refactor extract<CR>", { silent = true })
+       vim.keymap.set("x", "<leader>rf", ":Refactor extract_to_file<CR>", { silent = true })
+       vim.keymap.set("x", "<leader>rv", ":Refactor extract_var<CR>", { silent = true })
+       vim.keymap.set({"n", "x"}, "<leader>ri", ":Refactor inline_var<CR>", { silent = true })
+       vim.keymap.set("n", "<leader>rI", ":Refactor inline_func<CR>", { silent = true })
+       vim.keymap.set("n", "<leader>rb", ":Refactor extract_block<CR>", { silent = true })
+       vim.keymap.set("n", "<leader>rbf", ":Refactor extract_block_to_file<CR>", { silent = true })
+     end
+   }
 }

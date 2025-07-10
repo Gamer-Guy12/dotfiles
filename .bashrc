@@ -111,3 +111,24 @@ export TERM="xterm-256color"
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+
+parse_git_branch() {
+  git rev-parse --is-inside-work-tree &>/dev/null || return
+  branch=$(git symbolic-ref --short HEAD 2>/dev/null || git describe --tags --exact-match 2>/dev/null)
+  [[ -n "$branch" ]] && echo "$branch"
+}
+
+export PS1=''
+
+PS1+="\[\e[38;2;255;255;255m\e[48;2;63;199;0m\]\u@\h\[\e[0m\]"
+PS1+="\[\e[38;2;63;199;0m\e[48;2;80;80;80m\]\[\e[0m\]"
+
+PS1+="\[\e[38;2;255;255;255m\e[48;2;80;80;80m\]\d\[\e[0m\]"
+PS1+="\[\e[38;2;80;80;80m\e[48;2;0;152;212m\]\[\e[0m\]"
+
+PS1+="\[\e[38;2;255;255;255m\e[48;2;0;152;212m\]\w\[\e[0m\]"
+
+PS1+="\[\e[0m\e[38;2;0;152;212m\]\[\e[0m\]"
+
+PS1+="\n$ "
+
